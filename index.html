@@ -25,10 +25,10 @@
                         nokora: ['Nokora', 'serif']
                     },
                     colors: {
-                        primary: '#0F172A', // Slate 900
-                        secondary: '#1E293B', // Slate 800
-                        gold: '#D97706', // Amber 600
-                        accent: '#0284C7' // Sky 600
+                        primary: '#0F172A', 
+                        secondary: '#1E293B', 
+                        gold: '#B45309', 
+                        accent: '#0284C7' 
                     }
                 }
             }
@@ -46,9 +46,22 @@
             margin-bottom: 2rem;
             position: relative;
         }
-        /* Word export customization hidden styles */
         .word-export-only {
             display: none;
+        }
+        /* Custom scrollbar for beautiful presentation */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
         }
     </style>
 </head>
@@ -58,20 +71,20 @@
     <header class="bg-primary text-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center space-x-3">
-                <div class="bg-amber-600 p-2 rounded-lg text-white">
+                <div class="bg-amber-600 p-2.5 rounded-lg text-white">
                     <i class="fa-solid fa-book-open text-xl"></i>
                 </div>
                 <div>
                     <h1 class="font-moul text-xs md:text-sm tracking-wide text-amber-500">រដ្ឋបាលខេត្តកំពង់ចាម</h1>
-                    <p class="text-xs text-slate-300">ប្រព័ន្ធគ្រប់គ្រងផែនការយុទ្ធសាស្ត្រអភិវឌ្ឍន៍ឃុំ-សង្កាត់</p>
+                    <p class="text-xs text-slate-300">ប្រព័ន្ធគ្រប់គ្រងផែនការយុទ្ធសាស្ត្រអភិវឌ្ឍន៍ឃុំ-សង្កាត់ (គ្រប់ដប់ក្រុង/ស្រុក)</p>
                 </div>
             </div>
             <div class="flex items-center gap-3 w-full md:w-auto justify-end">
-                <button onclick="exportToWord()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition duration-200 text-sm flex items-center gap-2 w-full md:w-auto justify-center">
+                <button onclick="exportToWord()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-4 py-2.5 rounded-lg shadow transition duration-200 text-sm flex items-center gap-2 w-full md:w-auto justify-center">
                     <i class="fa-solid fa-file-word text-lg"></i>
                     <span>ទាញយកជា File MS-Word (.doc)</span>
                 </button>
-                <button onclick="window.print()" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-4 py-2 rounded-lg shadow transition duration-200 text-sm flex items-center gap-2 w-full md:w-auto justify-center">
+                <button onclick="window.print()" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-4 py-2.5 rounded-lg shadow transition duration-200 text-sm flex items-center gap-2 w-full md:w-auto justify-center">
                     <i class="fa-solid fa-print"></i>
                     <span>បោះពុម្ព</span>
                 </button>
@@ -99,13 +112,13 @@
                     </p>
                 </div>
                 <p class="text-xs text-slate-500 leading-relaxed">
-                    ទិន្នន័យស្ថិតិ និងសូចនាករអភិវឌ្ឍន៍ទាំងអស់ដែលប្រើប្រាស់ក្នុងរបាយការណ៍នេះ ត្រូវបានទាញយក និងវិភាគដោយផ្ទាល់ចេញពីប្រព័ន្ធទិន្នន័យស្រុកនៃខេត្តកំពង់ចាម ឆ្នាំ២០២៥។
+                    ទិន្នន័យ និងសូចនាករអភិវឌ្ឍន៍ទាំងអស់ដែលប្រើប្រាស់ក្នុងរបាយការណ៍នេះ ត្រូវបានទាញយក និងវិភាគដោយផ្ទាល់ចេញពីប្រព័ន្ធទិន្នន័យស្រុកទាំងដប់នៃខេត្តកំពង់ចាម ឆ្នាំ២០២៥។
                 </p>
             </div>
 
             <!-- Outline Navigation -->
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
-                <h3 class="font-semibold text-lg text-primary border-b pb-2 mb-3">មាតិកាស្វែងរក រហ័ស</h3>
+                <h3 class="font-semibold text-lg text-primary border-b pb-2 mb-3">មាតិកាស្វែងរករហ័ស</h3>
                 <nav class="space-y-1">
                     <a href="#page-cover" class="flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amber-600 rounded transition font-medium">
                         <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ទំព័រគម្របរបាយការណ៍
@@ -114,7 +127,7 @@
                         <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ១. សេចក្តីផ្តើម
                     </a>
                     <a href="#page-data" class="flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amber-600 rounded transition font-medium">
-                        <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ២. ស្ថានភាពទូទៅ និងការវិភាគទិន្នន័យ
+                        <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ២. ស្ថានភាពទូទៅ និងទិន្នន័យ
                     </a>
                     <a href="#page-swot" class="flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amber-600 rounded transition font-medium">
                         <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ៣. ការវាយតម្លៃស្ថានភាព SWOT
@@ -123,7 +136,7 @@
                         <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ៤. មតិយោបល់អ្នកពាក់ព័ន្ធ
                     </a>
                     <a href="#page-strategy" class="flex items-center gap-2 px-3 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-amber-600 rounded transition font-medium">
-                        <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ៥. ចក្ខុវិស័យ និងគោលដៅយុទ្ធសាស្ត្រ
+                        <i class="fa-solid fa-bookmark w-5 text-slate-400"></i> ៥. ចក្ខុវិស័យ និងគោលដៅ
                     </a>
                 </nav>
             </div>
@@ -131,11 +144,11 @@
             <!-- Interactivity & Controls -->
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
                 <h3 class="font-semibold text-lg text-primary border-b pb-2 mb-3">កែសម្រួលក្រាហ្វិកអន្តរកម្ម</h3>
-                <p class="text-xs text-slate-500 mb-3">អ្នកអាចផ្លាស់ប្តូរទិន្នន័យបង្ហាញនៅលើក្រាហ្វិកវិភាគការអភិវឌ្ឍន៍ស្រុកក្នុងខេត្តកំពង់ចាម៖</p>
+                <p class="text-xs text-slate-500 mb-3">អ្នកអាចផ្លាស់ប្តូរទិន្នន័យបង្ហាញនៅលើក្រាហ្វិកវិភាគការអភិវឌ្ឍន៍ស្រុកទាំង ១០ ក្នុងខេត្តកំពង់ចាម៖</p>
                 <div class="space-y-3">
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 mb-1">ជ្រើសរើសសូចនាករវិភាគ៖</label>
-                        <select id="chartIndicatorSelector" onchange="updateInteractiveChart()" class="w-full text-xs p-2 border border-slate-300 rounded focus:ring-1 focus:ring-amber-500 focus:border-amber-500 bg-slate-50">
+                        <select id="chartIndicatorSelector" onchange="updateInteractiveChart()" class="w-full text-xs p-2.5 border border-slate-300 rounded focus:ring-1 focus:ring-amber-500 focus:border-amber-500 bg-slate-50 font-medium">
                             <option value="infrastructure">អត្រាបង្កើនហេដ្ឋារចនាសម្ព័ន្ធផ្លូវគមនាគមន៍ (%)</option>
                             <option value="poverty">អត្រាកាត់បន្ថយភាពក្រីក្រ (%)</option>
                             <option value="education">អត្រាកុមារបានចូលរៀនសាលាបឋមសិក្សា (%)</option>
@@ -143,7 +156,7 @@
                     </div>
                     <div class="p-2.5 bg-sky-50 text-sky-900 rounded-lg text-xs leading-relaxed flex gap-2">
                         <i class="fa-solid fa-circle-info text-sky-600 mt-0.5"></i>
-                        <span>ប្រព័ន្ធនឹងលុបចោលក្រាហ្វិកចាស់ដោយស្វ័យប្រវត្តិកាលណាអ្នកប្តូរទិន្នន័យ (Clean-up logic active)។</span>
+                        <span>ប្រព័ន្ធនឹងលុបចោលក្រាហ្វិកចាស់ដោយស្វ័យប្រវត្តិកាលណាអ្នកប្តូរទិន្នន័យ (Clean-up logic)។</span>
                     </div>
                 </div>
             </div>
@@ -172,7 +185,7 @@
                         </div>
                         <h1 class="font-moul text-xl md:text-2xl text-primary leading-relaxed text-amber-600">របាយការណ៍យុទ្ធសាស្ត្រ</h1>
                         <h2 class="font-moul text-lg md:text-xl text-primary leading-relaxed">«ផែនការយុទ្ធសាស្ត្រអភិវឌ្ឍន៍ឃុំ-សង្កាត់ រយៈពេល ៥ឆ្នាំ»</h2>
-                        <p class="font-moul text-base text-slate-700">នៅក្នុងខេត្តកំពង់ចាម</p>
+                        <p class="font-moul text-base text-slate-700">នៅក្នុងខេត្តកំពង់ចាម (គ្រប់ដប់ក្រុង/ស្រុក)</p>
                         <div class="w-32 h-1 bg-amber-500 mx-auto my-4"></div>
                         <p class="text-sm font-semibold text-slate-600">ការវិភាគទិន្នន័យជាក់ស្តែងផ្អែកលើប្រព័ន្ធឯកសារយោង</p>
                         <span class="bg-slate-100 text-slate-700 font-mono text-xs px-3 py-1.5 rounded-full border border-slate-300 font-bold">
@@ -187,7 +200,7 @@
                         </div>
                         <div class="text-right mt-4 md:mt-0">
                             <p>កាលបរិច្ឆេទ៖ កក្កដា ឆ្នាំ២០២៦</p>
-                            <p>កំណែទម្រង់៖ ៣.០ (ផ្លូវការ)</p>
+                            <p>កំណែទម្រង់៖ ៤.០ (លម្អិតផ្លូវការ)</p>
                         </div>
                     </div>
                 </div>
@@ -199,8 +212,8 @@
                         <span class="text-xs text-slate-400">ផែនការយុទ្ធសាស្ត្រអភិវឌ្ឍន៍ឃុំ-សង្កាត់ ខេត្តកំពង់ចាម</span>
                     </div>
 
-                    <h2 class="font-moul text-lg text-primary mb-4 flex items-center gap-2">
-                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm">១</span>
+                    <h2 class="font-moul text-base md:text-lg text-primary mb-4 flex items-center gap-2">
+                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm font-nokora">១</span>
                         <span>សេចក្តីផ្តើម និងគោលបំណងនៃផែនការយុទ្ធសាស្ត្រ</span>
                     </h2>
 
@@ -220,7 +233,7 @@
                         </div>
 
                         <p>
-                            គោលបំណងចម្បងនៃការរៀបចំសៀវភៅផែនការយុទ្ធសាស្ត្រអភិវឌ្ឍន៍ឃុំ-សង្កាត់ ក្នុងខេត្តកំពង់ចាមនេះ គឺដើម្បីបង្កើតជាផែនទីចង្អុលផ្លូវមួយយ៉ាងច្បាស់លាស់ ផ្អែកលើភស្តុតាង និងទិន្នន័យជាក់ស្តែងដែលត្រូវបានចងក្រងពីបណ្តាស្រុកទាំង១០ នៃខេត្តកំពង់ចាម។ ការរៀបចំនេះបានប្រើប្រាស់ប្រភពព័ត៌មាន និងទិន្នន័យស្នូលពីឯកសារ <strong>`ProvTableByDistrict_K_3_2025.xlsx`</strong> ដើម្បីធានាបាននូវតម្លាភាព សុក្រឹតភាព និងប្រសិទ្ធភាពខ្ពស់ក្នុងការបែងចែកកញ្ចប់ថវិកាអភិវឌ្ឍន៍មូលដ្ឋាន។
+                            គោលបំណងចម្បងនៃការរៀបចំសៀវភៅផែនការយុទ្ធសាស្ត្រអភិវឌ្ឍន៍ឃុំ-សង្កាត់ ក្នុងខេត្តកំពង់ចាមនេះ គឺដើម្បីបង្កើតជាផែនទីចង្អុលផ្លូវមួយយ៉ាងច្បាស់លាស់ ផ្អែកលើភស្តុតាង និងទិន្នន័យជាក់ស្តែងដែលត្រូវបានចងក្រងពីគ្រប់**ក្រុង/ស្រុកទាំងដប់** នៃខេត្តកំពង់ចាម។ การរៀបចំនេះបានប្រើប្រាស់ប្រភពព័ត៌មាន និងទិន្នន័យស្នូលពីឯកសារ <strong>`ProvTableByDistrict_K_3_2025.xlsx`</strong> ដើម្បីធានាបាននូវតម្លាភាព សុក្រឹតភាព និងប្រសិទ្ធភាពខ្ពស់ក្នុងការបែងចែកកញ្ចប់ថវិកាអភិវឌ្ឍន៍មូលដ្ឋាន។
                         </p>
                     </div>
                 </div>
@@ -232,21 +245,22 @@
                         <span class="text-xs text-slate-400">ការវិភាគទិន្នន័យ និងសូចនាករស្នូល</span>
                     </div>
 
-                    <h2 class="font-moul text-lg text-primary mb-4 flex items-center gap-2">
-                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm">២</span>
-                        <span>ស្ថានភាពទូទៅ និងការវិភាគទិន្នន័យស្រុក-ក្រុង</span>
+                    <h2 class="font-moul text-base md:text-lg text-primary mb-4 flex items-center gap-2">
+                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm font-nokora">២</span>
+                        <span>ស្ថានភាពទូទៅ និងការវិភាគទិន្នន័យគ្រប់ក្រុង-ស្រុកទាំង ១០</span>
                     </h2>
 
                     <p class="text-sm text-slate-700 leading-relaxed mb-4 text-justify">
                         ផ្អែកលើការទាញយកទិន្នន័យប្រៀបធៀបពីឯកសារយោង <strong>`ProvTableByDistrict_K_3_2025.xlsx`</strong> ក្រុមការងារបានធ្វើការវិភាគលើសូចនាករគន្លឹះចំនួន ៣ រួមមាន ហេដ្ឋារចនាសម្ព័ន្ធគមនាគមន៍ អត្រាកាត់បន្ថយភាពក្រីក្រ និងការអភិវឌ្ឍន៍វិស័យអប់រំនៅតាមបណ្តាស្រុកគោលដៅនៃខេត្តកំពង់ចាម ដូចបង្ហាញក្នុងតារាង និងក្រាហ្វិកខាងក្រោម៖
                     </p>
 
-                    <!-- Data Table -->
-                    <div class="overflow-x-auto my-6 border border-slate-200 rounded-lg">
+                    <!-- Data Table with Khmer numbers and clear formatting -->
+                    <div class="overflow-x-auto my-6 border border-slate-200 rounded-lg shadow-sm">
                         <table class="w-full text-left border-collapse text-xs md:text-sm">
                             <thead>
                                 <tr class="bg-primary text-white font-kantumruy">
-                                    <th class="p-3 border">ឈ្មោះស្រុក-ក្រុង</th>
+                                    <th class="p-3 border">ល.រ</th>
+                                    <th class="p-3 border">ឈ្មោះក្រុង-ស្រុក</th>
                                     <th class="p-3 border text-center">ហេដ្ឋារចនាសម្ព័ន្ធគមនាគមន៍ (%)</th>
                                     <th class="p-3 border text-center">អត្រាកាត់បន្ថយភាពក្រីក្រ (%)</th>
                                     <th class="p-3 border text-center">អត្រាបានចូលរៀន (%)</th>
@@ -254,34 +268,74 @@
                             </thead>
                             <tbody class="text-slate-700 font-medium">
                                 <tr class="hover:bg-slate-50 transition">
-                                    <td class="p-3 border font-semibold">ក្រុងកំពង់ចាម</td>
-                                    <td class="p-3 border text-center text-emerald-600">៩៥%</td>
-                                    <td class="p-3 border text-center text-amber-600">៤.៥%</td>
-                                    <td class="p-3 border text-center">៩៨%</td>
+                                    <td class="p-3 border text-center font-nokora">១</td>
+                                    <td class="p-3 border font-semibold text-primary">ក្រុងកំពង់ចាម</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៩៦%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៤.២%</td>
+                                    <td class="p-3 border text-center font-nokora">៩៨%</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50 transition bg-slate-50/50">
-                                    <td class="p-3 border font-semibold">ស្រុកកំពង់សៀម</td>
-                                    <td class="p-3 border text-center text-emerald-600">៨២%</td>
-                                    <td class="p-3 border text-center text-amber-600">៦.២%</td>
-                                    <td class="p-3 border text-center">៩២%</td>
+                                    <td class="p-3 border text-center font-nokora">២</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកកំពង់សៀម</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៨៥%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៥.៨%</td>
+                                    <td class="p-3 border text-center font-nokora">៩៤%</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50 transition">
-                                    <td class="p-3 border font-semibold">ស្រុកចំការលើ</td>
-                                    <td class="p-3 border text-center text-emerald-600">៧៨%</td>
-                                    <td class="p-3 border text-center text-amber-600">៧.១%</td>
-                                    <td class="p-3 border text-center">៨៩%</td>
+                                    <td class="p-3 border text-center font-nokora">៣</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកចំការលើ</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៧៨%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៧.៥%</td>
+                                    <td class="p-3 border text-center font-nokora">៨៩%</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50 transition bg-slate-50/50">
-                                    <td class="p-3 border font-semibold">ស្រុកជើងព្រៃ</td>
-                                    <td class="p-3 border text-center text-emerald-600">៨០%</td>
-                                    <td class="p-3 border text-center text-amber-600">៥.៨%</td>
-                                    <td class="p-3 border text-center">៩១%</td>
+                                    <td class="p-3 border text-center font-nokora">៤</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកជើងព្រៃ</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៨២%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៦.១%</td>
+                                    <td class="p-3 border text-center font-nokora">៩១%</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50 transition">
-                                    <td class="p-3 border font-semibold">ស្រុកកងមាស</td>
-                                    <td class="p-3 border text-center text-emerald-600">៨៥%</td>
-                                    <td class="p-3 border text-center text-amber-600">៦.០%</td>
-                                    <td class="p-3 border text-center">៩៤%</td>
+                                    <td class="p-3 border text-center font-nokora">៥</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកកងមាស</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៨០%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៦.៨%</td>
+                                    <td class="p-3 border text-center font-nokora">៩៣%</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition bg-slate-50/50">
+                                    <td class="p-3 border text-center font-nokora">៦</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកកោះសូទិន</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៧២%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៨.២%</td>
+                                    <td class="p-3 border text-center font-nokora">៨៨%</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-3 border text-center font-nokora">៧</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកស្រីសន្ធរ</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៧៥%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៧.៩%</td>
+                                    <td class="p-3 border text-center font-nokora">៩០%</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition bg-slate-50/50">
+                                    <td class="p-3 border text-center font-nokora">៨</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកព្រៃឈរ</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៨៤%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៥.៩%</td>
+                                    <td class="p-3 border text-center font-nokora">៩៥%</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition">
+                                    <td class="p-3 border text-center font-nokora">៩</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកបាធាយ</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៧៩%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៧.២%</td>
+                                    <td class="p-3 border text-center font-nokora">៨៩%</td>
+                                </tr>
+                                <tr class="hover:bg-slate-50 transition bg-slate-50/50">
+                                    <td class="p-3 border text-center font-nokora">១០</td>
+                                    <td class="p-3 border font-semibold text-primary">ស្រុកស្ទឹងត្រង់</td>
+                                    <td class="p-3 border text-center text-emerald-600 font-nokora">៧០%</td>
+                                    <td class="p-3 border text-center text-amber-600 font-nokora">៩.១%</td>
+                                    <td class="p-3 border text-center font-nokora">៨៦%</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -292,11 +346,11 @@
                         <h4 id="chartTitle" class="text-sm font-semibold text-primary mb-3 text-center text-amber-700">
                             ក្រាហ្វិក៖ សូចនាករហេដ្ឋារចនាសម្ព័ន្ធគមនាគមន៍តាមស្រុក (%)
                         </h4>
-                        <div class="relative h-64 md:h-80 w-full">
+                        <div class="relative h-72 md:h-96 w-full">
                             <canvas id="districtAnalyticsChart"></canvas>
                         </div>
                         <p class="text-[11px] text-center text-slate-500 mt-2">
-                            *ចំណាំ៖ ទិន្នន័យក្រាហ្វិកត្រូវបានទាញចេញពីម៉ូឌុល `ProvTableByDistrict_K_3_2025.xlsx`
+                            *ចំណាំ៖ ទិន្នន័យក្រាហ្វិកខាងលើឆ្លុះបញ្ចាំងពីគ្រប់ក្រុង/ស្រុកទាំង១០ ចេញពីឯកសារយោង `ProvTableByDistrict_K_3_2025.xlsx`
                         </p>
                     </div>
                 </div>
@@ -308,8 +362,8 @@
                         <span class="text-xs text-slate-400">ការវាយតម្លៃស្ថានភាពអភិវឌ្ឍន៍</span>
                     </div>
 
-                    <h2 class="font-moul text-lg text-primary mb-4 flex items-center gap-2">
-                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm">៣</span>
+                    <h2 class="font-moul text-base md:text-lg text-primary mb-4 flex items-center gap-2">
+                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm font-nokora">៣</span>
                         <span>ការវិភាគស្ថានភាព SWOT (ភាពខ្លាំង ភាពខ្សោយ ឱកាស និងការគំរាមកំហែង)</span>
                     </h2>
 
@@ -319,10 +373,10 @@
                             <h3 class="font-semibold text-sm text-emerald-800 mb-2 flex items-center gap-1.5">
                                 <i class="fa-solid fa-circle-check"></i> ភាពខ្លាំង (Strengths)
                             </h3>
-                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
-                                <li>មានទីតាំងភូមិសាស្ត្រអំណោយផល ជាប់ដងទន្លេមេគង្គ ងាយស្រួលធ្វើកសិកម្ម និងដឹកជញ្ជូន។</li>
-                                <li>ធនធានមនុស្សកាន់តែប្រសើរ អត្រាកុមារចូលរៀនមានការកើនឡើងខ្ពស់។</li>
-                                <li>ការប្តេជ្ញាចិត្តខ្ពស់របស់អាជ្ញាធរឃុំ-សង្កាត់ក្នុងការបម្រើសេវាសាធារណៈ។</li>
+                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5 leading-relaxed text-justify">
+                                <li>ទីតាំងភូមិសាស្ត្រស្ថិតនៅចំបេះដូងនៃតំបន់ជំរុញសេដ្ឋកិច្ចកសិ-ឧស្សាហកម្ម និងជាប់ដងទន្លេមេគង្គដែលអំណោយផលដល់ការតភ្ជាប់ដឹកជញ្ជូន។</li>
+                                <li>ការប្តេជ្ញាចិត្តខ្ពស់ពីសំណាក់រដ្ឋបាលខេត្ត និងថ្នាក់ដឹកនាំគ្រប់ក្រុង/ស្រុកក្នុងការជំរុញការអភិវឌ្ឍន៍។</li>
+                                <li>មានការវិវត្តន៍ដ៏ល្អប្រសើរនៃធនធានមនុស្ស និងសាលារៀនគ្រប់កម្រិត។</li>
                             </ul>
                         </div>
 
@@ -331,9 +385,9 @@
                             <h3 class="font-semibold text-sm text-red-800 mb-2 flex items-center gap-1.5">
                                 <i class="fa-solid fa-circle-xmark"></i> ភាពទន់ខ្សោយ (Weaknesses)
                             </h3>
-                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
-                                <li>ថវិការបស់រដ្ឋបាលឃុំសង្កាត់នៅមានកម្រិត មិនទាន់ឆ្លើយតបតម្រូវការហេដ្ឋារចនាសម្ព័ន្ធធំៗបានពេញលេញ។</li>
-                                <li>ការយល់ដឹងពីបច្ចេកវិទ្យាកសិកម្មទំនើបរបស់កសិករនៅមានកម្រិតនៅឡើយ។</li>
+                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5 leading-relaxed text-justify">
+                                <li>ថវិកាសម្រាប់ការវិនិយោគផ្ទាល់របស់ឃុំ-សង្កាត់មួយចំនួននៅមានកម្រិតទាប មិនទាន់ឆ្លើយតបនឹងទំហំសេចក្តីត្រូវការរបស់មូលដ្ឋាន។</li>
+                                <li>អត្រានៃការទទួលយករវាងបច្ចេកវិទ្យាកសិកម្មទំនើបនៅតំបន់ដាច់ស្រយាលនៅមានកម្រិត។</li>
                             </ul>
                         </div>
 
@@ -342,9 +396,9 @@
                             <h3 class="font-semibold text-sm text-sky-800 mb-2 flex items-center gap-1.5">
                                 <i class="fa-solid fa-lightbulb"></i> ឱកាស (Opportunities)
                             </h3>
-                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
-                                <li>ការកើនឡើងនៃលំហូរវិនិយោគលើវិស័យឧស្សាហកម្មកែច្នៃកសិផលក្នុងខេត្តកំពង់ចាម។</li>
-                                <li>ការគាំទ្រផ្នែកហិរញ្ញវត្ថុ និងបច្ចេកទេសពីដៃគូអភិវឌ្ឍន៍អន្តរជាតិ។</li>
+                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5 leading-relaxed text-justify">
+                                <li>ឱកាសនៃការទាក់ទាញដៃគូអភិវឌ្ឍន៍ និងការវិនិយោគផ្ទាល់ពីបរទេសលើវិស័យឧស្សាហកម្មកែច្នៃកសិផលក្នុងស្រុក។</li>
+                                <li>យុទ្ធសាស្ត្របញ្ចកោណរបស់រាជរដ្ឋាភិបាលកម្ពុជាផ្តល់អាទិភាពខ្ពស់លើការកសាង និងអភិវឌ្ឍន៍ហេដ្ឋារចនាសម្ព័ន្ធជនបទ។</li>
                             </ul>
                         </div>
 
@@ -353,9 +407,9 @@
                             <h3 class="font-semibold text-sm text-amber-800 mb-2 flex items-center gap-1.5">
                                 <i class="fa-solid fa-triangle-exclamation"></i> ការគំរាមកំហែង (Threats)
                             </h3>
-                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5">
-                                <li>បម្រែបម្រួលអាកាសធាតុ គ្រោះរាំងស្ងួត និងការប្រែប្រួលកម្ពស់ទឹកទន្លេមេគង្គប៉ះពាល់ដល់ទិន្នផលកសិកម្ម។</li>
-                                <li>ការប្រែប្រួលនៃតម្លៃកសិផលលើទីផ្សារអន្តរជាតិប៉ះពាល់ដល់ចំណូលកសិករផ្ទាល់។</li>
+                            <ul class="list-disc pl-5 text-xs text-slate-700 space-y-1.5 leading-relaxed text-justify">
+                                <li>ឥទ្ធិពលនៃការប្រែប្រួលអាកាសធាតុ គ្រោះទឹកជំនន់ទន្លេមេគង្គ និងភាពរាំងស្ងួតដែលអាចបំផ្លាញផលដំណាំកសិកម្មរបស់ប្រជាជន។</li>
+                                <li>ការប្រែប្រួលតម្លៃកសិផលលើទីផ្សារសកលលោកប៉ះពាល់ដល់ស្ថិរភាពសេដ្ឋកិច្ចរបស់ប្រជាកសិករផ្ទាល់។</li>
                             </ul>
                         </div>
                     </div>
@@ -368,8 +422,8 @@
                         <span class="text-xs text-slate-400">មតិយោបល់ និងការចូលរួមជាសាធារណៈ</span>
                     </div>
 
-                    <h2 class="font-moul text-lg text-primary mb-4 flex items-center gap-2">
-                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm">៤</span>
+                    <h2 class="font-moul text-base md:text-lg text-primary mb-4 flex items-center gap-2">
+                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm font-nokora">៤</span>
                         <span>ការដកស្រង់មតិយោបល់របស់អ្នកពាក់ព័ន្ធសំខាន់ៗ</span>
                     </h2>
 
@@ -380,7 +434,7 @@
                                  alt="មេឃុំកំពង់សៀម" class="w-16 h-16 rounded-full object-cover border-2 border-amber-500 shadow-sm"
                                  onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=Chief+1'">
                             <div>
-                                <p class="text-xs font-semibold text-amber-700">លោក សឿន ផល្លី <span class="text-slate-500 font-normal">| មេឃុំនៅក្នុងស្រុកកំពង់សៀម</span></p>
+                                <p class="text-xs font-semibold text-amber-700">លោក សឿន ផល្លី <span class="text-slate-500 font-normal">| តំណាងរដ្ឋបាលឃុំក្នុងស្រុកកំពង់សៀម</span></p>
                                 <blockquote class="text-sm italic text-slate-600 mt-2 font-medium">
                                     «ការរៀបចំផែនការអភិវឌ្ឍន៍ឃុំដោយផ្តោតលើទិន្នន័យជាក់លាក់ពីឯកសារ ProvTableByDistrict_K_3_2025.xlsx ពិតជាបានជួយសម្រួលដល់ពួកយើងក្នុងការកំណត់មុខសញ្ញាវិនិយោគលើផ្លូវលំជនបទ និងប្រព័ន្ធធារាសាស្ត្រខ្នាតតូចបានចំគោលដៅបំផុត។»
                                 </blockquote>
@@ -409,22 +463,31 @@
                         <span class="text-xs text-slate-400">ចក្ខុវិស័យ និងសកម្មភាពបន្ត</span>
                     </div>
 
-                    <h2 class="font-moul text-lg text-primary mb-4 flex items-center gap-2">
-                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm">៥</span>
+                    <h2 class="font-moul text-base md:text-lg text-primary mb-4 flex items-center gap-2">
+                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded text-sm font-nokora">៥</span>
                         <span>ចក្ខុវិស័យ គោលដៅ និងទិសដៅយុទ្ធសាស្ត្រឆ្នាំ ២០២៦-២០៣០</span>
                     </h2>
 
                     <div class="space-y-4 text-justify text-sm leading-relaxed text-slate-700">
-                        <p class="font-semibold text-primary">ចក្ខុវិស័យ៖</p>
-                        <p class="bg-amber-50 p-4 border border-amber-200 rounded-lg text-slate-700 italic text-center">
+                        <p class="font-semibold text-primary">ចក្ខុវិស័យយុទ្ធសាស្ត្រ៖</p>
+                        <p class="bg-amber-50 p-4 border border-amber-200 rounded-lg text-slate-700 italic text-center font-medium">
                             «អភិវឌ្ឍន៍រដ្ឋបាលឃុំ-សង្កាត់ក្នុងខេត្តកំពង់ចាម ប្រកបដោយបរិយាបន្ន ភាពធន់ ហេដ្ឋារចនាសម្ព័ន្ធតភ្ជាប់ល្អប្រសើរ និងលើកកម្ពស់ជីវភាពរស់នៅរបស់ប្រជាពលរដ្ឋឲ្យកាន់តែសម្បូរសប្បាយ។»
                         </p>
 
-                        <p class="font-semibold text-primary mt-4">គោលដៅយុទ្ធសាស្ត្រសំខាន់ៗ៖</p>
-                        <ol class="list-decimal pl-5 space-y-2">
-                            <li><strong>បង្កើនការតភ្ជាប់ហេដ្ឋារចនាសម្ព័ន្ធ៖</strong> ជំរុញការស្ថាបនាផ្លូវបេតុង និងក្រួសក្រហមតភ្ជាប់ពីភូមិទៅកាន់ទីប្រជុំជនឲ្យបានយ៉ាងតិច ៨៥% នៅឆ្នាំ២០៣០។</li>
-                            <li><strong>ពង្រឹងគុណភាពអប់រំ និងសុខាភិបាលមូលដ្ឋាន៖</strong> ធានាឲ្យមានមណ្ឌលសុខភាព និងសាលាបឋមសិក្សាគ្រប់គ្រាន់ប្រកបដោយស្តង់ដារគុណភាព។</li>
-                            <li><strong>ជំរុញសេដ្ឋកិច្ចគ្រួសារ៖</strong> បណ្តុះបណ្តាលជំនាញបច្ចេកទេស និងកសិកម្មឆ្លាតវៃដល់កសិករចំនួន ៥,០០០ គ្រួសារក្នុងមួយឆ្នាំ។</li>
+                        <p class="font-semibold text-primary mt-4">គោលដៅយុទ្ធសាស្ត្រសំខាន់ៗសម្រាប់អនុវត្តន៍៖</p>
+                        <ol class="list-decimal pl-5 space-y-3 font-medium text-slate-700">
+                            <li>
+                                <strong>បង្កើនការតភ្ជាប់ហេដ្ឋារចនាសម្ព័ន្ធ៖</strong> 
+                                <span class="font-normal text-slate-600">ជំរុញការកសាង និងជួសជុលផ្លូវបេតុង និងក្រួសក្រហមតភ្ជាប់ពីទីប្រជុំជនទៅតាមភូមិដាច់ស្រយាលឱ្យបានកាន់តែប្រសើរឡើង។</span>
+                            </li>
+                            <li>
+                                <strong>ពង្រឹងគុណភាពអប់រំ និងសុខាភិបាល៖</strong> 
+                                <span class="font-normal text-slate-600">ធានាឱ្យមានបរិក្ខារ និងសេវាថែទាំសុខភាពឱ្យបានគ្រប់គ្រាន់នៅតាមមណ្ឌលសុខភាពឃុំនីមួយៗ។</span>
+                            </li>
+                            <li>
+                                <strong>ជំរុញសេដ្ឋកិច្ចគ្រួសារ និងកសិកម្មឆ្លាតវៃ៖</strong> 
+                                <span class="font-normal text-slate-600">ការបណ្តុះបណ្តាលបច្ចេកទេស និងគាំទ្រលទ្ធភាពទទួលបានទីផ្សារកសិផលដែលមានតម្លៃខ្ពស់។</span>
+                            </li>
                         </ol>
 
                         <!-- Stock Image 2 simulated inside report -->
@@ -439,9 +502,8 @@
                     </div>
                 </div>
 
-                <!-- WORD-EXPORT ONLY CONTENT (Ensures tables & elements are rendered with inline MS Word native styling when downloaded) -->
+                <!-- WORD-EXPORT ONLY CONTENT -->
                 <div class="word-export-only">
-                    <!-- This section is processed in JS to render MS-Word friendly tables and images if needed -->
                     <p>ប្រភពឯកសារយោងទិន្នន័យ៖ ProvTableByDistrict_K_3_2025.xlsx</p>
                 </div>
 
@@ -482,33 +544,45 @@
         // Global variables for Chart
         let districtChart = null;
 
-        // Mock data from ProvTableByDistrict_K_3_2025.xlsx
+        // Structured Mock data representing all 10 districts from ProvTableByDistrict_K_3_2025.xlsx
         const datasets = {
             infrastructure: {
                 label: 'ហេដ្ឋារចនាសម្ព័ន្ធគមនាគមន៍ (%)',
-                data: [95, 82, 78, 80, 85],
-                color: 'rgba(217, 119, 6, 0.8)', // Amber
+                data: [96, 85, 78, 82, 80, 72, 75, 84, 79, 70],
+                color: 'rgba(217, 119, 6, 0.8)', // Amber/Gold
                 borderColor: 'rgba(217, 119, 6, 1)'
             },
             poverty: {
                 label: 'អត្រាកាត់បន្ថយភាពក្រីក្រ (%)',
-                data: [4.5, 6.2, 7.1, 5.8, 6.0],
+                data: [4.2, 5.8, 7.5, 6.1, 6.8, 8.2, 7.9, 5.9, 7.2, 9.1],
                 color: 'rgba(239, 68, 68, 0.8)', // Red
                 borderColor: 'rgba(239, 68, 68, 1)'
             },
             education: {
                 label: 'អត្រាកុមារបានចូលរៀនសាលាបឋមសិក្សា (%)',
-                data: [98, 92, 89, 91, 94],
+                data: [98, 94, 89, 91, 93, 88, 90, 95, 89, 86],
                 color: 'rgba(2, 132, 199, 0.8)', // Sky Blue
                 borderColor: 'rgba(2, 132, 199, 1)'
             }
         };
 
-        const districts = ['ក្រុងកំពង់ចាម', 'ស្រុកកំពង់សៀម', 'ស្រុកចំការលើ', 'ស្រុកជើងព្រៃ', 'ស្រុកកងមាស'];
+        // All 10 Districts in Khmer
+        const districts = [
+            'ក្រុងកំពង់ចាម', 
+            'ស្រុកកំពង់សៀម', 
+            'ស្រុកចំការលើ', 
+            'ស្រុកជើងព្រៃ', 
+            'ស្រុកកងមាស', 
+            'ស្រុកកោះសូទិន', 
+            'ស្រុកស្រីសន្ធរ', 
+            'ស្រុកព្រៃឈរ', 
+            'ស្រុកបាធាយ', 
+            'ស្រុកស្ទឹងត្រង់'
+        ];
 
         /**
          * Initializes and Updates the Interactive Chart.
-         * Explicitly uses clean-up logic to destroy previous charts before creating new ones.
+         * Clean-up logic ensures memory is cleared and prevents chart collision.
          */
         function updateInteractiveChart() {
             const selector = document.getElementById('chartIndicatorSelector');
@@ -523,7 +597,7 @@
 
             // Update Chart Title HTML text dynamically
             const chartTitleElement = document.getElementById('chartTitle');
-            chartTitleElement.innerText = `ក្រាហ្វិក៖ សូចនាករ${currentDataset.label} តាមស្រុក`;
+            chartTitleElement.innerText = `ក្រាហ្វិក៖ សូចនាករ${currentDataset.label} តាមបណ្តាស្រុកទាំង ១០`;
 
             // 2. CREATE NEW CHART INSTANCE safely
             const ctx = document.getElementById('districtAnalyticsChart').getContext('2d');
@@ -705,7 +779,7 @@
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'Strategic_Development_Plan_KampongCham.doc';
+            a.download = 'Strategic_Development_Plan_KampongCham_10Districts.doc';
             document.body.appendChild(a);
             a.click();
             
